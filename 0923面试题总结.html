@@ -104,9 +104,97 @@
             Vue.delete 直接删除了数组 改变了数组的键值。
         </p>
         <p><strong>删除对象</strong><br>
-            两者相同，都会把键名（属性/字段）和键值删除。 
+            两者相同，都会把键名（属性/字段）和键值删除。
         </p>
         <h3>7、前端如何优化网站性能</h3>
+        <p>
+            <strong>一、PC端优化策略</strong><br>
+            1、网络加载类<br>
+            （1）减少HTTP资源请求次数<br>
+            （2）减少HTTP请求大小<br>
+            （3）将CSS或JavaScript放到外部文件中，避免使用style或script标签直接引入<br>
+            （4）避免页面中空的href和src<br>
+            （5）为HTML指定Cache-Control或Expires<br>
+            （6）合理设置Etag和Last-Modified<br>
+            （7）减少页面重定向<br>
+            （8）使用静态资源分域存放来增加下载并行数<br>
+            （9）使用静态资源CDN来存储文件<br>
+            （10）使用CDN Combo下载传输内容<br>
+            （11）使用可缓存的AJAX<br>
+            （12）使用GET来完成AJAX请求<br>
+            （13）减少Cookie的大小并进行Cookie隔离<br>
+            （14）缩小favicon.ico并缓存<br>
+            （15）推荐使用异步JavaScript资源<br>
+            （16）消除阻塞渲染的CSS及JavaScript<br>
+            （17）避免使用CSS import引用加载CSS<br>
+
+            2、页面渲染类<br>
+            （1）把CSS资源引用放到HTML文件顶部<br>
+            （2）JavaScript资源引用放到HTML文件底部<br>
+            （3）尽量预先设定图片等大小<br>
+            （4）不要在HTML中直接缩放图片<br>
+            （5）减少DOM元素数量和深度<br>
+            （6）尽量避免在选择器末尾添加通配符<br>
+            （7）减少使用关系型样式表的写法<br>
+            （8）尽量减少使用JS动画<br>
+            （9）CSS动画使用translate、scale代替top、height<br>
+            （10）尽量避免使用 table、iframe<br>
+            （11）避免运行耗时的JavaScript<br>
+            （12）避免使用CSS表达式或CSS滤镜<br>
+
+
+            <strong>二、移动端优化策略</strong><br>
+            1、网络加载类<br>
+            （1）首屏数据请求提前，避免JavaScript文件加载后才请求数据<br>
+            （2）首屏加载和按需加载，非首屏内容滚屏加载，保证首屏内容最小化<br>
+            （3）模块化资源并行下载<br>
+            （4）inline首屏必备的CSS和JavaScript<br>
+            （5）meta dns prefetch设置DNS预解析<br>
+            （6）资源预加载<br>
+            （7）合理利用MTU策略<br>
+
+            2、缓存类<br>
+            （1）合理利用浏览器缓存<br>
+            （2）静态资源离线方案<br>
+            （3）尝试使用AMP HTML<br>
+            （4）尝试使用PWA模式<br>
+
+            3、图片类<br>
+            （1）图片压缩处理<br>
+            （2）使用较小的图片，合理使用base64内嵌图片<br>
+            （3）使用更高压缩比格式的图片<br>
+            （4）图片懒加载<br>
+            （5）使用MediaQuery 或 srcset根据不同屏幕加载不同大小图片<br>
+            （6）使用iconfont代替图片图标<br>
+            （7）定义图片大小限制<br>
+            （8）强缓存策略<br>
+
+            4、脚本类<br>
+            （1）尽量使用id<br>
+            （2）合理缓存DOM对象<br>
+            （3）页面元素尽量使用事件代理，避免直接事件绑定<br>
+            （4）使用touchstart代替click<br>
+            （5）避免touchmove、scroll连续事件处理<br>
+            （6）避免使用eval、with，使用join代替连接符+，推荐使用ECMAScript6的字符串模板，这些都是一些基础的安全脚本编写问题，尽可能使用较高效率的特性来完成这些操作，避免不规范或不安全的写法<br>
+            （7）尽量使用ECMAScript6+的特性来编程<br>
+
+            5、渲染类<br>
+            （1）使用Viewport固定屏幕渲染，可以加速页面渲染内容<br>
+            （2）避免各种形式重排重绘<br>
+            （3）使用CSS3动画，开启GPU加速<br>
+            （4）合理使用Canvas 和 requestAnimationFrame<br>
+            （5）SVG 代替图片<br>
+            （6）不滥用float<br>
+            （7）不滥用web字体或过多font-size声明<br>
+            （8）做好脚本容错<br>
+
+            6、架构协议类<br>
+            （1）尝试使用 SPDY 和 HTTP2<br>
+            （2）使用后端数据渲染<br>
+            （3）使用 NativeView 代替 DOM 的性能劣势<br>
+
+        </p>
+        <p><a href="https://www.jianshu.com/p/d9c20eafa67e">参考摘自处</a></p>
         <h3>8、vue-router有哪几种路由守卫</h3>
         <h3>9、请写一下小程序各个生命周期的执行时间</h3>
         <h3>10、请列举一下你使用过的小程序的函数，并坐简单介绍</h3>
@@ -116,4 +204,5 @@
     </section>
 </body>
 https://blog.csdn.net/weixin_51157081/article/details/119391436
+
 </html>
