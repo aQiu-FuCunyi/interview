@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0923面试总结</title>
+    <title>面试总结</title>
 </head>
 <style>
     section {
@@ -209,6 +209,12 @@
             beforeRouteLeave 离开当前路由时, 导航离开该组件的对应路由时调用，可以访问组件实例 this<br>
 
         </p>
+        <h3>9、vue中的 data 为什么是函数</h3>
+        <p>vue中的data是一个对象类型，对象类型的数据是按引用传值的，这就会导致所有组件的实例都共享同一份数据，这是不对的，我们要的是每个组件实例都是独立的为了解决对象类型数据共享的问题，我们需要将 data
+            定义成一个函数，每个实例需要通过调用函数生成一个独立的数据对象</p>
+        <p><strong>总结</strong><br>
+            根实例对象data可以是对象也可以是函数（根实例是单例），不会产生数据污染情况
+            组件实例对象data必须为函数，目的是为了防止多个组件实例对象之间共用一个data，产生数据污染。采用函数的形式，initData时会将其作为工厂函数都会返回全新data对象</p>
         <h3>9、请写一下小程序各个生命周期的执行时间</h3>
         <h3>10、请列举一下你使用过的小程序的函数，并坐简单介绍</h3>
         <h3>11、简单描述一下小程序中app.json的作用</h3>
