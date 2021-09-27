@@ -196,6 +196,19 @@
         </p>
         <p><a href="https://www.jianshu.com/p/d9c20eafa67e">参考摘自处</a></p>
         <h3>8、vue-router有哪几种路由守卫</h3>
+        <p>
+            <strong>一、全局守卫</strong><br>
+            router.beforeEach 全局前置守卫 进入路由之前<br>
+            router.beforeResolve 全局解析守卫(2.5.0+) 在beforeRouteEnter调用之后调用<br>
+            router.afterEach 全局后置钩子 进入路由之后<br>
+            <strong>二、路由独享守卫</strong><br>
+            如果你不想全局配置守卫的话，你可以为某些路由单独配置守卫<br>
+            <strong>三、路由组件内的守卫</strong><br>
+            beforeRouteEnter 进入路由前, 在路由独享守卫后调用 不能 获取组件实例 this，组件实例还没被创建<br>
+            beforeRouteUpdate (2.2) 路由复用同一个组件时, 在当前路由改变，但是该组件被复用时调用 可以访问组件实例 this<br>
+            beforeRouteLeave 离开当前路由时, 导航离开该组件的对应路由时调用，可以访问组件实例 this<br>
+
+        </p>
         <h3>9、请写一下小程序各个生命周期的执行时间</h3>
         <h3>10、请列举一下你使用过的小程序的函数，并坐简单介绍</h3>
         <h3>11、简单描述一下小程序中app.json的作用</h3>
